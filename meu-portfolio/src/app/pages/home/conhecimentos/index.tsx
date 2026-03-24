@@ -25,6 +25,11 @@ const MOCK_CO = [
         icon: <GrMysql/>,
         nome: 'MySQL',
         dataComeco: '1 ano de experiência' 
+    },
+    {
+        icon: <TbBrandNextjs/>,
+        nome: 'Next.js',
+        dataComeco: '1 ano de experiência' 
     }
 ]
 
@@ -32,7 +37,7 @@ export const Conhecimentos = () => {
     return(
         <section className="container py-16">
             <Titulo title="Conhecimentos" subtitle="competências"/>
-            <div>
+            <div className="flex flex-row gap-10 mt-[100px]">
                 {MOCK_CO.map(con => (
                     <ConhecimentoTec tec={{
                         icon:con.icon,
