@@ -1,0 +1,4 @@
+{
+    "github.copilot.chat.agent.autoFix": true,
+    "inlineChat.defaultModel": "Claude Haiku 4.5 (claude-code)"
+}
