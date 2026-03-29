@@ -5,47 +5,74 @@ import { FaJava } from "react-icons/fa6";
 import { FaReact, FaFigma } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 
-const MOCK_CO = [
+const conhecimentos = [
     {
-        icon: <FaJava/>,
-        nome: 'Java',
-        dataComeco: '1 ano de experiência' 
+        categoria: "Backend",
+        tecs: [
+            { icon: <FaJava/>, nome: 'Java',},
+            { icon: <GrMysql/>, nome: 'MySQL',},
+            { icon: <TbBrandNextjs/>, nome: 'Next.js'},
+            { icon: <TbBrandNextjs/>, nome: 'Next.js'},
+            { icon: <TbBrandNextjs/>, nome: 'Next.js'}
+        ]
     },
     {
-        icon: <FaReact/>,
-        nome: 'React',
-        dataComeco: '1 ano de experiência' 
+        categoria: "Frontend",
+        tecs: [
+            { icon: <FaReact/>, nome: 'React',},
+            { icon: <TbBrandNextjs/>, nome: 'Next.js'},
+            { icon: <TbBrandNextjs/>, nome: 'Next.js'},
+            { icon: <TbBrandNextjs/>, nome: 'Next.js'},
+
+        ]
     },
     {
-        icon: <FaFigma/>,
-        nome: 'Figma',
-        dataComeco: '1 ano de experiência' 
+        categoria: "Design",
+        tecs: [
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+        ]
     },
     {
-        icon: <GrMysql/>,
-        nome: 'MySQL',
-        dataComeco: '1 ano de experiência' 
+        categoria: "Ferramentas",
+        tecs: [
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+        ]
     },
     {
-        icon: <TbBrandNextjs/>,
-        nome: 'Next.js',
-        dataComeco: '1 ano de experiência' 
+        categoria: "Ferramentas",
+        tecs: [
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+            { icon: <FaFigma/>, nome: 'Figma'},
+        ]
     }
 ]
 
 export const Conhecimentos = () => {
     return(
         <section className="container py-16">
-            <Titulo title="Conhecimentos" subtitle="competências"/>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-3 mt-[60px]">
-                {MOCK_CO.map(con => (
-                    <ConhecimentoTec tec={{
-                        icon:con.icon,
-                        nome: con.nome,
-                        dataComeco: con.dataComeco
-                    }}/>
+            <Titulo title="Conhecimentos" subtitle="competências" className="container py-16"/>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {conhecimentos.map((conhecimento, index) => (
+                    <div key={index} className="border border-gray-800 rounded-xl p-6">
+                        <h3 className="text-gray-500 text-xs uppercase tracking-widest mb-4">{conhecimento.categoria}</h3>
+                        <div className="flex flex-col">
+                            {conhecimento.tecs.map((tec, i) => (
+                                <ConhecimentoTec key={i} tec={tec}/>
+                            ))}
+                        </div>
+                    </div>
                 ))}
-                
             </div>
         </section>
     )

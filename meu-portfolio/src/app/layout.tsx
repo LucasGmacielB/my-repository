@@ -24,7 +24,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${inter.variable} ${plexMono.variable}`}
     >
-      <body overflow-x-hidden>
+      <body>
         <Header/>
         {children}
       </body>

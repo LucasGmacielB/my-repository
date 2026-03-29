@@ -4,19 +4,15 @@ type ConhecimentoTecProps = {
     tec: {
         icon: ReactNode
         nome: string
-        dataComeco?: string
     }
 }
 
 export const ConhecimentoTec = ({ tec }: ConhecimentoTecProps) => {
     return(
-        <div className="bg-gray-700/20 rounded-lg p-5 text-gray-500 hover:text-blue-500 hover:bg-gray-700/30 transition-all">
-            <div className="flex items-center justify-between">
-                <p>{tec.nome}</p>
-                {tec.icon}
-            </div>
-            <div className="mt-[3px]">
-                {tec.dataComeco}
+        <div className="flex items-center gap-3 py-3 border-b border-gray-800 donw:border-0">
+            <span className="text-blue-400 text-lg">{tec.icon}</span>
+            <div>
+                <p className="text-gray-300 text-sm font-medium">{tec.nome}</p>
             </div>
         </div>
     )

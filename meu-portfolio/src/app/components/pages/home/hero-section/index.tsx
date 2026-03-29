@@ -14,14 +14,10 @@ const CONTACTS = [
     {
         url:"https://wa.me/5581993254458",
         icon: <TbBrandWhatsapp/>
-    },
-    {
-        url:"mailto:lucas.macielbarros01@gmail.com",
-        icon: <TbBrandGmail/>
     }
 ]
 
-export const HeroSection = () => {
+export const Perfil = () => {
     return(
         <section className="w-full lg:h-[730px] bg-[url('/images/fundo3.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[150px]">
             <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
