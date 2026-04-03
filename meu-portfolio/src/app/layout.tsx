@@ -5,6 +5,7 @@ import { Header } from './components/header';
 import { Contatos } from './components/contatos';
 import { url } from 'inspector';
 import { BotaoTopo } from './components/botaoTopo/botaoTopo';
+import { Footer } from './components/footer';
 
 export const metadata = {
   icons:[
@@ -40,6 +41,7 @@ export default function RootLayout({
         {children}
         <Contatos/>
         <BotaoTopo/>
+        <Footer/>
       </body>
     </html>
   );
