@@ -13,7 +13,7 @@ const CONTACTS = [
         icon: <TbBrandGithub/>
     },
     {
-        url:"www.linkedin.com/in/lucas-g-maciel-62b203351",
+        url:"https://www.linkedin.com/in/lucas-g-maciel-62b203351",
         icon: <TbBrandLinkedin/>
     },
     {
@@ -38,11 +38,14 @@ const tecnologias = [
     {
         nome: "React.js"
     },
+    {
+        nome: "Next.js"
+    }
 ]
 
 export const Perfil = () => {
     return(
-        <section className="w-full lg:h-[800px] bg-[url('/images/fundo3.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[150px]">
+        <section className="w-full lg:h-[800px] bg-[url('/images/bg.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[150px]">
             <div className="container flex itens-start justify-between flex-col-reverse lg:flex-row">
                 <motion.div 
                     className="w-full lg:max-w-[530px]"

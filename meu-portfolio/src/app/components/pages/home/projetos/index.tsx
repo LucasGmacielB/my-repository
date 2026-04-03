@@ -9,20 +9,21 @@ import { motion } from "framer-motion"
 
 const projetos = [
     {
-        imagem: "/images/javaProjeto.jpg",
+        imagem: "/images/projetos/javaProjeto.jpg",
         nomeProjeto: "Sistema de gestão para academias",
-        descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iusto ex ratione ullam, nam est, laborum qui in porro ea ad odio voluptatum aperiam. Voluptas nisi soluta inventore reprehenderit quos.",
+        descricao: "Sistema de gerenciamento de academia em Java, com cadastro de alunos e planos e registro de pagamentos, aplicando conceitos de POO e organização em camadas (model, repository e service).",
         tecs: ["Java"],
         repositorio: "https://github.com/LucasGmacielB/Sistema-de-gestao-de-academias",
-        projetoOnline: "/"
+        projetoOnline: ""
     },
     {
-        imagem: "/images/Portfolio.png",
+        imagem: "/images/projetos/Portfolio.png",
         nomeProjeto: "Meu Portfolio",
-        descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iusto ex ratione ullam, nam est, laborum qui in porro ea ad odio voluptatum aperiam. Voluptas nisi soluta inventore reprehenderit quos.",
+        descricao: "Projeto de portfólio desenvolvido com React, Next.js, Tailwind CSS e TypeScript, criado para apresentar meus projetos mais relevantes de forma organizada, com foco em performance e uma interface simples e responsiva.",
         tecs: ["React", "Next.js", "TypeScript", "Tailwind"],
-        repositorio: "https://github.com/LucasGmacielB/my-repository"
-    },
+        repositorio: "https://github.com/LucasGmacielB/my-repository",
+        projetoOnline: ""
+    }
 ]
 
 export const Projetos = () => {

@@ -31,7 +31,7 @@ export const CardProjeto = ({imagem, descricaoImagem, nomeProjeto, descricaoProj
             </div>
             <div className="flex flex-col p-8">
                 <strong className="font-medium text-gray-50/85 group-hover:text-blue-500 transition-colors">{nomeProjeto}</strong>
-                <p className="mt-2 text-gray-400 line-clamp-4">{descricaoProjeto}</p>
+                <p className="mt-2 text-gray-400">{descricaoProjeto}</p>
                 <span className="text-gray-300 text-sm font-medium block mt-2 truncate">{tecnologias}</span>
 
                 <div className="mt-4 flex">
