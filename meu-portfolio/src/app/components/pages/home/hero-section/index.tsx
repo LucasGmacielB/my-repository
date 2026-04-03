@@ -1,6 +1,10 @@
+'use client'
+
 import { Techs } from "@/app/components/techs"
 import Image from "next/image"
-import { TbBrandGithub, TbBrandLinkedin, TbBrandWhatsapp, TbBrandGmail } from 'react-icons/tb';
+import { IoMdDownload } from "react-icons/io";
+import { TbBrandGithub, TbBrandLinkedin, TbBrandWhatsapp } from 'react-icons/tb';
+import { delay, motion } from 'framer-motion';
 
 const CONTACTS = [
     {
@@ -17,11 +21,35 @@ const CONTACTS = [
     }
 ]
 
+const tecnologias = [
+    {
+        nome: "Java"
+    },
+    {
+        nome: "SQL"
+    },
+    {
+        nome: "Phyton"
+    },
+    {
+        nome: "Spring Boot"
+    },
+    {
+        nome: "React.js"
+    },
+]
+
 export const Perfil = () => {
     return(
-        <section className="w-full lg:h-[730px] bg-[url('/images/fundo3.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[150px]">
-            <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
-                <div className="w-full lg:max-w-[530px]">
+        <section className="w-full lg:h-[800px] bg-[url('/images/fundo3.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[150px]">
+            <div className="container flex itens-start justify-between flex-col-reverse lg:flex-row">
+                <motion.div 
+                    className="w-full lg:max-w-[530px]"
+                    initial={{ opacity: 0, x: -100}}
+                    whileInView={{opacity: 1, x: 0}}
+                    exit={{opacity: 0, x: -100}}
+                    transition={{duration: 0.5}}
+                >
                     <p className="font-mono text-blue-500 mt-3">Olá, tubo bem? Meu nome é</p>
                     <h2 className="text-4xl font-medium mt-2">Lucas Gabriel</h2>
 
@@ -30,18 +58,23 @@ export const Perfil = () => {
                     </div>
 
                     <div className=" flex flex-wrap gap-y-4 gap-x-3 lg:max-w-[340px]">
-                        <Techs nome="Java"/>
-                        <Techs nome="SQL"/>
-                        <Techs nome="Phyton"/>
-                        <Techs nome="Spring Boot"/>
-                        <Techs nome="React.js"/>
+                        {tecnologias.map((p, i) => (
+                            <Techs 
+                                nome={p.nome}
+                                initial={{opacity: 0, scale: 0}}
+                                whileInView={{opacity: 1, scale: 1}}
+                                exit={{opacity: 0, scale: 0}}
+                                transition={{duration: 0.5, delay: i * 0.1}}
+                            />
+                        ))}
                     </div>
 
                     <div className="flex items-center text-gray-600  mt-6 sm:mt-10 gap-5">
 
-                        <div className="bg-blue-500/50 text-gray-50 p-3 rounded-lg shadow-[0_0_30px_rgba(59,130,246,0.5)]">
-                            <p>Contatos</p>
-                        </div>
+                        <a href="/cv.pdf" target="_blank" className="flex items-center gap-2 px-4 py-1.5 rounded-lg text-sm font-medium text-blue-400 border border-blue-500/30 bg-blue-500/20 hover:bg-blue-500/30 transition-all">
+                            <p>Baixar CV</p>
+                            <IoMdDownload />
+                        </a>
                         
                         <div className="flex gap-1 text-3xl">
                             {CONTACTS.map(contact =>(
@@ -49,9 +82,14 @@ export const Perfil = () => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div
+                    initial={{opacity: 0, y: 200, scale: 0.5}}
+                    whileInView={{opacity: 1, y: 0, scale: 1}}
+                    exit={{opacity: 0, y: 200, scale: 0.5}}
+                    transition={{duration: 0.5}}
+                >
                     <Image
                         width={420}
                         height={404}
@@ -59,7 +97,7 @@ export const Perfil = () => {
                         alt="foto de perfil"
                         className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] shadow-2xl rounded-lg"
                     />
-                </div>
+                </motion.div>
             </div>
 
 

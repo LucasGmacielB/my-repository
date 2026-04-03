@@ -1,7 +1,7 @@
 import { TbBrandGithub, TbBrandLinkedin, TbBrandWhatsapp } from "react-icons/tb"
 import { FaInstagram } from "react-icons/fa";
 import { Titulo } from "../titulo"
-import { BotaoSocial } from "./butaoSocial"
+import { BotaoSocial } from "./botaoSocial"
 
 export const Contatos = () => {
     const texto = "text-blue-500 mb-2 mt-8"
@@ -18,7 +18,7 @@ export const Contatos = () => {
                     <h3 className={texto}>SOCIAL</h3>
                 </div> 
                 <div className="grid grid-cols-3 m-3 gap-y-3">
-                        <BotaoSocial link="www.linkedin.com/in/lucas-g-maciel-62b203351" nome="LinkedIn" icon={<TbBrandLinkedin/>}/>
+                        <BotaoSocial link="https://www.linkedin.com/in/lucas-g-maciel-62b203351" nome="LinkedIn" icon={<TbBrandLinkedin/>}/>
                         <BotaoSocial link="https://github.com/LucasGmacielB" nome="GitHub" icon={<TbBrandGithub/>}/>
                         <BotaoSocial link="https://wa.me/5581993254458" nome="WhatsApp" icon={<TbBrandWhatsapp/>}/>
                         <BotaoSocial link="https://www.instagram.com/_lucasgb._" nome="Instagram" icon={<FaInstagram/>}/>

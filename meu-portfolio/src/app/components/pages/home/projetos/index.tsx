@@ -6,18 +6,18 @@ import Link from "next/link"
 
 const projetos = [
     {
-        imagem: "/images/fotoPerfil.png",
-        nomeProjeto: "Projeto Java",
+        imagem: "/images/javaProjeto.jpg",
+        nomeProjeto: "Sistema de gestão para academias",
         descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iusto ex ratione ullam, nam est, laborum qui in porro ea ad odio voluptatum aperiam. Voluptas nisi soluta inventore reprehenderit quos.",
-        tecs: ["Java", "Spring", "MySQL"],
-        link: "/"
+        tecs: ["Java"],
+        link: "https://github.com/LucasGmacielB/Sistema-de-gestao-de-academias"
     },
     {
-        imagem: "/images/fundo.jpg",
+        imagem: "/images/Portfolio.png",
         nomeProjeto: "Meu Portfolio",
-        descricao: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iusto ex ratione ullam, nam est, laborum qui in porro ea ad odio voluptatum aperiam. Voluptas nisi soluta inventore reprehenderit quos.",
-        tecs: ["Next.js", "TypeScript", "Tailwind"],
-        link: "/"
+        descricao: "Lorem",
+        tecs: ["React", "Next.js", "TypeScript", "Tailwind"],
+        link: "https://github.com/LucasGmacielB/my-repository"
     },
 ]
 
@@ -37,7 +37,7 @@ export const Projetos = () => {
             </div>
             <div className="flex items-center justify-end gap-3">
                 <p>Deseja ver mais projetos?</p>
-                <Link href="/projetos">
+                <Link href="/projects">
                     <button className="flex items-center justify-center gap-2 h-[35px] w-[170px] bg-gray-800/30 rounded-md px-4 hover:bg-gray-700/50 hover:text-blue-300 transition-colors">
                         <p>Ver projetos</p>
                         <HiArrowNarrowRight />
