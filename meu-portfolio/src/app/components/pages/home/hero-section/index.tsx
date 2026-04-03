@@ -5,6 +5,7 @@ import Image from "next/image"
 import { IoMdDownload } from "react-icons/io";
 import { TbBrandGithub, TbBrandLinkedin, TbBrandWhatsapp } from 'react-icons/tb';
 import { delay, motion } from 'framer-motion';
+import { TypeAnimation } from "react-type-animation";
 
 const CONTACTS = [
     {
@@ -50,11 +51,22 @@ export const Perfil = () => {
                     exit={{opacity: 0, x: -100}}
                     transition={{duration: 0.5}}
                 >
-                    <p className="font-mono text-blue-500 mt-3">Olá, tubo bem? Meu nome é</p>
                     <h2 className="text-4xl font-medium mt-2">Lucas Gabriel</h2>
 
+                    <TypeAnimation
+                        sequence={[
+                            'Desenvolvedor Backend', 2000,
+                            '', 1000
+                        ]}
+                        wrapper="p"
+                        speed={50}
+                        repeat={Infinity}
+                        className="font-mono text-blue-500 mt-3 text-2xl font-medium"
+                    />
+                    
+
                     <div className="text-gray-400 my-6 text-sm sm:text-base">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate fuga optio, facilis neque earum molestias veritatis aut at esse culpa saepe perspiciatis ipsa dolorem provident! Unde quasi laborum mollitia commodi!</p>
+                        <p>Meu nome é Lucas, sou estudante de Sistemas para Internet na UNICAP e tenho uma queda pelo backstage da web — aquela parte que ninguém vê, mas que faz tudo acontecer. Com interesse em desenvolvimento backend e fullstack, busco meu primeiro estágio para sair dos bastidores do aprendizado e entrar em cena na prática.</p>
                     </div>
 
                     <div className=" flex flex-wrap gap-y-4 gap-x-3 lg:max-w-[340px]">

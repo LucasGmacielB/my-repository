@@ -23,3 +23,7 @@
   background-color: #105cb9;
   border-radius: 14px;
 }
+
+@theme {
+    --font-mono: var(--font-plex-mono), monospace;
+}

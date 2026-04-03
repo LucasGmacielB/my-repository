@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from "framer-motion"
 import { CardProjeto } from "./cardProjeto"
 
 const projetos = [
@@ -40,16 +43,23 @@ const projetos = [
 export const ListaProjetos = () => {
     return(
         <section className="container py-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-x-4 gap-y-6">
-            {projetos.map(p => (
-                <CardProjeto
-                    imagem={p.imagem}
-                    descricaoImagem={p.descricaoImagem}
-                    nomeProjeto={p.nomeProjeto}
-                    descricaoProjeto={p.descricaoProjeto}
-                    tecnologias={p.tecnologias}
-                    repositorio={p.repositorio}
-                    projetoOnline={p.projetoOnline}
-                />
+            {projetos.map((p, index) => (
+                <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+                >
+                    <CardProjeto
+                        imagem={p.imagem}
+                        descricaoImagem={p.descricaoImagem}
+                        nomeProjeto={p.nomeProjeto}
+                        descricaoProjeto={p.descricaoProjeto}
+                        tecnologias={p.tecnologias}
+                        repositorio={p.repositorio}
+                        projetoOnline={p.projetoOnline}
+                    />
+                </motion.div>
             ))}
         </section>
     )

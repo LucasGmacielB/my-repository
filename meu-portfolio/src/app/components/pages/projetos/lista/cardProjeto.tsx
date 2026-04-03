@@ -1,3 +1,4 @@
+import { LinkProjetos } from "@/app/components/linkProjetos/linkProjetos"
 import Image from "next/image"
 import Link from "next/link"
 import { HiOutlineStatusOnline } from "react-icons/hi"
@@ -34,18 +35,18 @@ export const CardProjeto = ({imagem, descricaoImagem, nomeProjeto, descricaoProj
                 <span className="text-gray-300 text-sm font-medium block mt-2 truncate">{tecnologias}</span>
 
                 <div className="mt-4 flex">
-                    <Link href={repositorio} className="overflow-hidden">
-                        <button className={estilo}>
-                            Repositório
-                            <TbBrandGithub/>
-                        </button>
+                    <Link href={repositorio} className="overflow-hidden" target="_blank">
+                        <LinkProjetos
+                            tipo="Repositório"
+                            icon={<TbBrandGithub/>}
+                        />
                     </Link>
                     {projetoOnline && (
-                        <Link href={projetoOnline} className="overflow-hidden ml-2.5">
-                            <button className={estilo}>
-                                Projeto Online
-                                <HiOutlineStatusOnline />
-                            </button>
+                        <Link href={projetoOnline} className="overflow-hidden ml-2.5" target="_blank">
+                            <LinkProjetos
+                                tipo="Projeto Online"
+                                icon={<HiOutlineStatusOnline />}
+                            />
                         </Link>
                     )}
                 </div>

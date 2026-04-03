@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 import { Header } from './components/header';
 import { Contatos } from './components/contatos';
 import { url } from 'inspector';
+import { BotaoTopo } from './components/botaoTopo/botaoTopo';
 
 export const metadata = {
   icons:[
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Header/>
         {children}
         <Contatos/>
+        <BotaoTopo/>
       </body>
     </html>
   );
