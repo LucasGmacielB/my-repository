@@ -2,6 +2,16 @@ import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react';
 import { Header } from './components/header';
+import { Contatos } from './components/contatos';
+import { url } from 'inspector';
+
+export const metadata = {
+  icons:[
+    {
+      url: '/logo.png'
+    }
+  ]
+}
 
 const inter = Inter({
   variable: '--font-inter',
@@ -27,6 +37,7 @@ export default function RootLayout({
       <body>
         <Header/>
         {children}
+        <Contatos/>
       </body>
     </html>
   );

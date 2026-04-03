@@ -1,11 +1,15 @@
-type nomeTechs = {
+'use client'
+import { motion } from 'framer-motion';
+import { Component, ComponentProps } from 'react';
+
+type nomeTechs = ComponentProps<typeof motion.span> & {
     nome : string;
 }
 
-export const Techs = ({ nome } : nomeTechs) => {
+export const Techs = ({ nome, ...props } : nomeTechs) => {
     return(
-        <span className="text-blue-500 bg-blue-900/75 text-sm py-1 px-3 rounded-lg">
+        <motion.span className="text-blue-500 bg-blue-900/75 text-sm py-1 px-3 rounded-lg" {...props}>
             {nome}
-        </span>
+        </motion.span>
     )
 }
